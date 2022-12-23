@@ -1,6 +1,44 @@
+:icons: font
+:author: Travis Michette <tmichett@redhat.com>
+:imagesdir: ./images/
+:highlightjs-languages: yaml, scilab, bash, ruby
+:date: 2022-12-23
+:icons: font
+// we want local served fonts. Therefore patched sky.css
+//:revealjs_theme: sky
+:revealjs_viewDistance: 5
+:revealjs_controls: true
+:revealjs_controlsLayout: edges
+:revealjs_controlsTutorial: true
+:revealjs_slideNumber: c/t
+:revealjs_showSlideNumber: speaker
+:revealjs_autoPlayMedia: true
+:revealjs_defaultTiming: 42
+//:revealjs_transitionSpeed: fast
+:imagesdir: images
+:source-highlighter: highlightjs
+:highlightjs-theme: css/atom-one-light.css
+
+
+
+
+// Initial Settings for Github
+ifndef::env-github[:icons: font]
+ifdef::env-github[]
+:status:
+:outfilesuffix: .adoc
+:caution-caption: :fire:
+:important-caption: :exclamation:
+:note-caption: :paperclip:
+:tip-caption: :bulb:
+:warning-caption: :warning:
+endif::[]
+
 = Slideshow Title
 
 == Slide One
+
+image::RH_Discord_Logo.png[title="Example Image Caption", align="center"]
 
 * Foo
 * Bar
@@ -15,3 +53,87 @@ A Great Story
 * tell anecdote
 * make a point
 --
+
+== Slide 3
+
+.Example Code box for YAML
+[source,yaml]
+----
+---
+- name: Deploy HTTPD Server Demo
+  hosts: server
+  collections:
+
+  tasks:
+
+## Start and Run the HTTPD Container
+    - name:  Start the Apache Container
+      podman_container:
+----
+
+
+== Slide 4
+
+.Example Code box for CLI
+[source,bash]
+----
+[student@workstation ~]$ sudo yum module install container-tools
+----
+
+
+== Slide 5
+
+.Supportability
+[TIP]
+======
+Allows a means for vendors to provide certified and supported collections and modules and leverages Ansible Automation Hub as a means of acquiring these collections.
+======
+
+== Slide 6
+
+image::Training_Cover.png[title="Example Image Caption", align="center"]
+
+[%step]
+* this
+* is
+* revealed
+* gradually
+
+
+== Slide 7
+
+[.highlight-blue%step]
+blue
+
+[%step]
+white
+
+[.highlight-red%step]
+red
+
+== Slide 8
+
+[TIP,step=3]
+Finally, a pro tip...
+
+[WARNING,step=1]
+First, watch out for...
+
+[IMPORTANT.fade-up,step=2]
+Second, don't forget...
+
+
+[.columns]
+== Slide 9
+
+[.column]
+* Java
+* **Kotlin**
+
+[.column]
+* Node
+* **Deno**
+
+[.column]
+* Ruby
+* **Crystal**
