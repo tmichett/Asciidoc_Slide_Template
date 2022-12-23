@@ -24,7 +24,7 @@ jobs:
         run: podman run --name adocpdf --rm -v $(pwd):/tmp/coursebook:Z quay.io/tmichett/asciidocpdf:latest /usr/bin/asciidoctor-revealjs Sample_Slide.adoc
 
       - name: Copy Slides to Index.html
-        run: cp Sample_Slide.html index.html
+        run: cp Sample_Slide.html docs/index.html
 
       - name: Commit and Add Book
         run: git config --global user.email "tmichett@redhat.com" && git config --global user.name "Travis Michette" && git add . && git commit -m "Added new main.pdf" && git push
