@@ -27,4 +27,4 @@ jobs:
         run: cp Sample_Slide.html docs/index.html
 
       - name: Commit and Add Book
-        run: git config --global user.email "tmichett@redhat.com" && git config --global user.name "Travis Michette" && git add . && git commit -m "Added new main.pdf" && git push
+        run: git config --global user.email "tmichett@redhat.com" && git config --global user.name "Travis Michette" && git add . && git commit -m "Added new SLIDES" && git push
