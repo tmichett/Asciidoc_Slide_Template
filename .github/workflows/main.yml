@@ -21,7 +21,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Podman Build Book
-        run: podman run --name adocpdf --rm -v -e "book_name=Sample_Slide.adoc"  $(pwd):/tmp/coursebook:Z quay.io/tmichett/asciidocpdf:latest /usr/bin/asciidoctor-revealjs $book_name
+        run: podman run --name adocpdf --rm -v $(pwd):/tmp/coursebook:Z quay.io/tmichett/asciidocpdf:latest /usr/bin/asciidoctor-revealjs Sample_Slide.adoc
 
       - name: Copy Slides to Index.html
         run: cp Sample_Slide.html index.html
