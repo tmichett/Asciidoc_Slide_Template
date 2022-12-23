@@ -54,6 +54,19 @@ A Great Story
 * make a point
 --
 
+=== Slide 2 - Subslide 1
+
+* This is a test.
+* This is another test.
+
+
+=== Slide 2 - Subslide 2
+
+* Image here
++
+image::RH_Discord_Logo.png[title="Example Image Caption", align="center"]
+
+
 == Slide 3
 
 .Example Code box for YAML
